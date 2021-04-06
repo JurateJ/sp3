@@ -1,0 +1,14 @@
+{
+    "name": "lenovo/sp3",
+    "description": "Sp3",
+    "require": {
+        "doctrine/orm": "^2.8"
+    },
+    "autoload": {
+        "psr-4": { 
+			"Zoo\\": "src/",
+			"Models\\": "src/models"
+		}
+    }
+
+}
