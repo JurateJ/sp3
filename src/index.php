@@ -48,18 +48,18 @@ $products = $entityManager->getRepository('Models\Product')->findBy(array('name'
 $products[0] !== NULL ? print $products[0]->getId() . ' ' . $products[0]->getName() : '';
 print("</pre><hr>");
 
-// print("<pre>Find Product(s) by other property (name): " . "<br>");
-// $products = $entityManager->getRepository('Models\Product')->findBy(array('name' => 'Doe'));
-// print("<table>");
-// foreach($products as $p)
-//     print("<tr>" 
-//             . "<td>" . $p->getId()  . "</td>" 
-//             . "<td>" . $p->getName() . "</td>" 
-//             . "<td><a href=\"?delete={$p->getId()}\">DELETE</a></td>" 
-//             . "<td><a href=\"?updatable={$p->getId()}\">UPDATE</a></td>"
-//         . "</tr>");
-// print("</table>"); 
-// print("</pre><hr>");
+print("<pre>Find Product(s) by other property (name): " . "<br>");
+$products = $entityManager->getRepository('Models\Product')->findBy(array('name' => 'Doe'));
+print("<table>");
+foreach($products as $p)
+    print("<tr>" 
+            . "<td>" . $p->getId()  . "</td>" 
+            . "<td>" . $p->getName() . "</td>" 
+            . "<td><a href=\"?delete={$p->getId()}\">DELETE</a></td>" 
+            . "<td><a href=\"?updatable={$p->getId()}\">UPDATE</a></td>"
+        . "</tr>");
+print("</table>"); 
+print("</pre><hr>");
 
 print("<pre>Find Product(s) by other property (name) sorted by another property (id): " . "<br>");
 $products = $entityManager
